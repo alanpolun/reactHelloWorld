@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Message() {
-    return <h1>Hello World</h1>;
+function Message({ sayTo }) {
+    return <h1>Hello {sayTo ? sayTo : 'World'}</h1>;
 }
 
 export default Message;

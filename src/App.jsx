@@ -5,7 +5,11 @@ import Message from '../components/Message'
 function App() {
   return (
     <>
-      <ListGroup />
+      <Message sayTo={"Alan Po"} />
+      <ListGroup 
+        heading="Hong Kong Districts" 
+        items={["Central and Western", "Eastern", "Southern", "Wan Chai", "Kowloon City"]} 
+      />
     </>
   )
 }
