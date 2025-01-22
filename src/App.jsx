@@ -12,11 +12,15 @@ function App() {
     console.log(selectedItem);
   };
 
+  const alertMessageContent = selectedItem ? selectedItem : <>Choose <b>an item</b> from the list</>;
+
   return (
     <>
-      <AlertMessage>
-        {selectedItem ? selectedItem : 'Choose an item from the list'}
-      </AlertMessage>
+      {selectedItem && (
+        <AlertMessage onClose={() => setSelectedItem(null)}>
+          {alertMessageContent}
+        </AlertMessage>
+      )}
       <Message sayTo={"Alan Po"} />
       <ListGroup 
         heading="Hong Kong Districts2" 
