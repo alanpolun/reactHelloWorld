@@ -1,5 +1,5 @@
 import React from 'react';
-function ListGroup({ heading, items }) {
+function ListGroup({ heading, items, onItemClick }) {
     const [hoveredIndex, setHoveredIndex] = React.useState(null);
 
     return (
@@ -13,6 +13,7 @@ function ListGroup({ heading, items }) {
                         style={{ backgroundColor: hoveredIndex === index ? 'lightblue' : 'white' }}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
+                        onClick={() => onItemClick(item)}
                     >
                         {item}
                     </li>

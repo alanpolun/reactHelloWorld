@@ -9,16 +9,17 @@ function App() {
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+    console.log(selectedItem);
   };
 
   return (
     <>
       <AlertMessage>
-        {selectedItem ? `Selected item: ${selectedItem}` : 'Choose an item from the list'}
+        {selectedItem ? selectedItem : 'Choose an item from the list'}
       </AlertMessage>
       <Message sayTo={"Alan Po"} />
       <ListGroup 
-        heading="Hong Kong Districts" 
+        heading="Hong Kong Districts2" 
         items={["Central and Western", "Eastern", "Southern", "Wan Chai", "Kowloon City"]} 
         onItemClick={handleItemClick}
       />
