@@ -12,13 +12,11 @@ function App() {
     console.log(selectedItem);
   };
 
-  const alertMessageContent = selectedItem ? selectedItem : <>Choose <b>an item</b> from the list</>;
-
   return (
     <>
       {selectedItem && (
         <AlertMessage onClose={() => setSelectedItem(null)}>
-          {alertMessageContent}
+          {selectedItem}
         </AlertMessage>
       )}
       <Message sayTo={"Alan Po"} />
